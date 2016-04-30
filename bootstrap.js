@@ -20,6 +20,7 @@ var gMenuId;
 function loadIntoWindow(window) {
   gMenuId = window.NativeWindow.menu.add({
     name: Strings.GetStringFromName("menu.savePage"),
+    parent: window.NativeWindow.menu.toolsMenuID,
     callback: function() {
       // TODO: Figure out where this file is actually saved.
       window.ContentAreaUtils.saveBrowser(window.BrowserApp.selectedBrowser, true);
